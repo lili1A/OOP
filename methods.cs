@@ -125,3 +125,23 @@ class Program
         Console.WriteLine("Updated Age: " + myDog.Age);
     }
 }
+
+// out parameters 
+void GetDogInfo(out string name, out int age)
+{
+    name = "Buddy";
+    age = 5
+}
+
+//usage
+class Program 
+{
+    static vois Main()
+    {
+        string dogname;
+        int dogAge;
+
+        GetDogInfo(out dogName, out dogAge);
+        Console.WriteLine($"Name: {dogname}, Age: {dogAge}")
+    }
+}
